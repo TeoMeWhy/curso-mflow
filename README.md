@@ -8,6 +8,7 @@ Todo material está no YouTube: [clique aqui](https://youtube.com/playlist?list=
 
 ## Estrutura do projeto
 
+```bash
 .
 ├── mlflow-server
 │   ├── mlartifacts
@@ -18,6 +19,7 @@ Todo material está no YouTube: [clique aqui](https://youtube.com/playlist?list=
 │   ├── requirements.txt
 │   └── train.py
 └── README.md
+```
 
 ### mlflow-server
 
