@@ -3,6 +3,7 @@ import pandas as pd
 from sklearn import model_selection
 from sklearn import tree
 from sklearn import metrics
+from sklearn import ensemble
 
 # %%
 
@@ -34,9 +35,13 @@ with mlflow.start_run():
 
     mlflow.sklearn.autolog()
 
-    clf = tree.DecisionTreeClassifier(min_samples_leaf=100,
-                                      min_samples_split=10,
-                                      random_state=42)
+    # clf = tree.DecisionTreeClassifier(min_samples_leaf=100,
+    #                                   min_samples_split=10,
+    #                                   random_state=42)
+
+    clf = ensemble.RandomForestClassifier(n_estimators=500,
+                                          min_samples_leaf=50,
+                                          random_state=42)
     clf.fit(X_train, y_train)
 
     y_train_predict = clf.predict(X_train)
