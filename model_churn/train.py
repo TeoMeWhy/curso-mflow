@@ -40,7 +40,7 @@ with mlflow.start_run():
     #                                   random_state=42)
 
     clf = ensemble.RandomForestClassifier(n_estimators=500,
-                                          min_samples_leaf=50,
+                                          min_samples_leaf=35,
                                           random_state=42)
     clf.fit(X_train, y_train)
 
